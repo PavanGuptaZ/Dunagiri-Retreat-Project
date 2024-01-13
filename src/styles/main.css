@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    min-width: 400px;
+    overflow-x: hidden;
+}
+
+.widthControl {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+:root {
+    --font_Family_0: "Fraunces", serif;
+    --font_Family_1: "Lato", sans-serif;
+    --font_Family_2: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width:1000px) {
+    .widthControl {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+}
+
+@media (max-width:500px) {
+    .widthControl {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+}
+
+.BasicButton {
+    cursor: pointer;
+    width: 200px;
+    height: 42px;
+    background-color: #014235;
+    outline: none;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover {
+        color: #014235;
+        background-color: #fff;
+        outline: 2px solid #014235;
+    }
+}
+
+.flexCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flexRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

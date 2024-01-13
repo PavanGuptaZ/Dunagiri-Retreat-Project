@@ -1,0 +1,275 @@
+.sectionTitle {
+    font-size: 62px;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+@media (max-width:800px) {
+    .sectionTitle {
+        font-size: 48px;
+    }
+}
+
+@media (max-width:500px) {
+    .sectionTitle {
+        font-size: 32px;
+    }
+}
+
+.MainImgBox {
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    gap: 2px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+    .columnBox {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        width: 250px;
+        /* width: calc((100% - 6px) / 4); */
+        flex-shrink: 0;
+    }
+
+    .imageBox {
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+
+        .image {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            transition: all 0.5s linear;
+        }
+
+        .hoverText {
+            opacity: 0;
+            position: absolute;
+            inset: 0;
+            background-color: #00000043;
+            color: #fff;
+            font-family: var(--font_Family_1);
+            font-weight: 600;
+            padding: 1rem;
+            display: flex;
+            align-items: flex-end;
+            transition: all 0.5s linear;
+        }
+
+        &:hover {
+
+            .image {
+                transform: scale(1.1);
+            }
+
+            .hoverText {
+                opacity: 1;
+            }
+        }
+    }
+
+    .colType1 {
+        .imageBox01 {
+            height: 40%;
+        }
+
+        .imageBox02 {
+            height: 60%;
+        }
+    }
+
+    .colType2 {
+        .imageBox02 {
+            height: 40%;
+        }
+
+        .imageBox01 {
+            height: 60%;
+        }
+    }
+}
+
+.viewImageBox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 100;
+    user-select: none;
+
+    .closeIcon {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2rem;
+        cursor: pointer;
+
+        &:hover {
+            color: brown;
+        }
+    }
+
+    .imageFullShowBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        width: 75%;
+        height: 75%;
+        position: relative;
+
+        .imageShowBox {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-content: center;
+        }
+
+
+
+    }
+
+    .Text {
+        font-family: var(--font_Family_0);
+        font-size: 2rem;
+        text-align: center;
+        text-wrap: balance;
+    }
+}
+
+.RightArrow,
+.LeftArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &:hover {
+        color: blueviolet;
+    }
+}
+
+.LeftArrow {
+    left: -20px;
+}
+
+.RightArrow {
+    right: -20px;
+}
+
+.GuestExperiences {
+    background-color: #EDEBEB;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .GuestContent {
+        width: 100%;
+        position: relative;
+
+
+        .imageFullBox {
+            width: 394px;
+            height: 520px;
+            overflow: hidden;
+            border-radius: 48.5% 48.5% 0 0;
+            background-position: center center;
+            background-size: cover;
+            transition: all 1s ease;
+        }
+
+        .GuestTextBox {
+            background-color: #fff;
+            position: absolute;
+            top: 70%;
+            transform: translateY(-50%);
+            right: 0;
+            max-width: 650px;
+            padding: 2rem;
+            margin: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            font-size: 1.5rem;
+            transition: all 1s ease;
+
+            .dash {
+                width: 100px;
+                height: 1px;
+                background-color: #000;
+            }
+        }
+    }
+
+    .changeSlide {
+        display: flex;
+        gap: 1rem;
+
+        &>* {
+            cursor: pointer;
+            width: 5px;
+            height: 5px;
+            background-color: #000;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &.active {
+                outline: 2px solid black;
+                outline-offset: 5px;
+            }
+        }
+
+    }
+}
+
+@media (max-width:700px) {
+
+    .GuestExperiences {
+
+        .GuestContent {
+
+            .imageFullBox {
+                width: 354px;
+                height: 480px;
+            }
+
+            .GuestTextBox {
+                background-color: #ffffffab;
+                gap: 1.5rem;
+                font-size: 1.25rem;
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+
+    .GuestExperiences {
+
+        .GuestContent {
+
+            .imageFullBox {
+                width: 300px;
+                height: 450px;
+            }
+
+            .GuestTextBox {
+                gap: 1rem;
+                font-size: 1rem;
+                padding: 1.5rem;
+            }
+        }
+    }
+}

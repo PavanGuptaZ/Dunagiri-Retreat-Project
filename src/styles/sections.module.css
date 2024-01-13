@@ -1,0 +1,564 @@
+.mainHeroSection {
+    min-height: max(100vh - 60px, 400px);
+    background: url(https://static.wixstatic.com/media/9c6671_5fe77d56c59b4643af0145e2c6e50c89f000.jpg/v1/fill/w_980,h_622,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/9c6671_5fe77d56c59b4643af0145e2c6e50c89f000.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: min(100%, 800px);
+    height: 400px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1rem;
+    background: url(https://static.wixstatic.com/media/137a28_9000e749fda2438e8359710ea5843f18~mv2.png/v1/fill/w_303,h_388,al_c,lg_1,q_85,enc_auto/Mahavatar-Babaji-transparent_edited.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    &>* {
+        text-align: center;
+        z-index: 1;
+    }
+
+    .title {
+        font-size: 58px;
+    }
+
+    .para {
+        font-style: italic;
+        text-wrap: balance;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        /* font-family: var(--font_Family_1); */
+        font-weight: 400;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+}
+
+.textSection {
+    font-size: 58px;
+    padding: 3rem 0 3rem 0;
+    text-align: center;
+    font-family: var(--font_Family_0);
+}
+
+@media (max-width:500px) {
+    .content {
+        .title {
+            font-size: 42px;
+        }
+
+        .para {
+
+            font-size: 1.25rem;
+        }
+    }
+
+    .textSection {
+        font-size: 38px;
+        text-align: center;
+    }
+}
+
+
+
+.sliderSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 2rem 0;
+    overflow: hidden;
+    gap: 2rem;
+
+    .sliderBox {
+        width: 100%;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+        .slider {
+            width: 100%;
+            gap: 1rem;
+            flex-shrink: 0;
+            padding: 0 2rem;
+
+
+
+            .slideText {
+                font-size: 28px;
+                text-align: center;
+                max-width: 800px;
+            }
+
+        }
+
+
+    }
+
+    .slideBTNBox {
+        display: flex;
+        gap: 0.5rem;
+        margin: auto;
+
+        .BTN {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #80A09A;
+            cursor: pointer;
+
+            &.active {
+                background-color: #000;
+            }
+        }
+    }
+}
+
+.retreatSection {
+    gap: 32px;
+    margin: 3rem 0;
+
+    .header {
+        font-size: 50px;
+        text-align: center;
+        font-family: var(--font_Family_0);
+
+    }
+
+    .retreatPara {
+        gap: 1rem;
+        font-family: var(--font_Family_1);
+        color: gray;
+    }
+}
+
+.reconnectSection {
+    background-color: #1D2927;
+    padding: 5rem 0rem;
+
+    .contentControl {
+        display: flex;
+        flex-direction: row;
+        color: #fff;
+        gap: 1rem;
+        align-content: flex-start;
+    }
+
+    .aside01 {
+        width: 35%;
+        font-size: 50px;
+
+    }
+
+    .aside02 {
+        width: 65%;
+        font-size: 28px;
+        font-family: var(--font_Family_1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+
+        .line {
+            width: 75px;
+            height: 1px;
+            background-color: #fff;
+        }
+    }
+}
+
+@media (max-width:750px) {
+    .reconnectSection {
+        padding: 4rem 0;
+
+        .aside01 {
+            font-size: 40px;
+
+        }
+
+        .aside02 {
+            font-size: 22px;
+            gap: 1.5rem;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .reconnectSection {
+        .contentControl {
+            flex-direction: column;
+        }
+
+        .aside01 {
+            width: 100%;
+        }
+
+        .aside02 {
+            width: 100%;
+        }
+    }
+}
+
+.motivationSection {
+    width: 100%;
+    max-width: 1080px;
+    margin: 4rem auto;
+    display: flex;
+
+
+    .ImgBox {
+        width: 40%;
+
+        .ImgTag {
+            width: 100%;
+            position: sticky;
+            top: 10px;
+        }
+    }
+
+    .motivationBox {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+
+        .head01 {
+            font-size: 16px;
+            font-family: var(--font_Family_1);
+        }
+
+        .head02 {
+            font-size: 48px;
+            text-align: center;
+            font-family: var(--font_Family_0);
+        }
+
+        .motivationList {
+            display: flex;
+            flex-wrap: wrap;
+
+            .item {
+                width: calc(100% / 3);
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .imgBox {
+                    width: 50px;
+                    filter: hue-rotate(60deg) contrast(25%);
+                }
+
+                .title {
+                    font-family: var(--font_Family_0);
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+
+                .parag {
+                    margin-top: 16px;
+                    font-family: var(--font_Family_1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .motivationSection {
+
+
+        .ImgBox {
+            width: 35%;
+        }
+
+        .motivationBox {
+            width: 65%;
+
+        }
+    }
+}
+
+@media (max-width:750px) {
+    .motivationSection {
+        .ImgBox {
+            width: 30%;
+        }
+
+        .motivationBox {
+            width: 70%;
+
+            .head01,
+            .head02 {
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .motivationList {
+
+
+                .item {
+                    width: calc(100% / 2);
+                }
+            }
+        }
+    }
+}
+
+
+.numbersSection {
+    background-color: #1D2927;
+    color: #fff;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin: 2rem 0 0 0;
+
+    .contentBox {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .head01 {
+            font-size: 24px;
+            font-family: var(--font_Family_1);
+
+        }
+
+        .head02 {
+            font-size: 42px;
+            font-family: var(--font_Family_0);
+
+        }
+
+        .valuesBox {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .data {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            &>* {
+                text-align: center;
+            }
+
+            .head03 {
+                font-size: 64px;
+            }
+
+            .parag {
+                text-wrap: balance;
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .motivationSection {
+        width: 100%;
+        max-width: 1080px;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .ImgBox {
+            width: 300px;
+
+        }
+
+        .motivationBox {
+            width: 100%;
+            padding: 0.5rem 2rem;
+
+
+        }
+    }
+
+    .numbersSection {
+
+        .contentBox {
+
+            .head01 {
+                font-size: 16px;
+
+            }
+
+            .head02 {
+                font-size: 38px;
+
+            }
+
+            .valuesBox {
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 3rem;
+            }
+
+            .data {
+                width: 200px;
+
+                &>* {
+                    text-align: center;
+                }
+
+                .head03 {
+                    font-size: 64px;
+                }
+
+                .parag {
+                    text-wrap: balance;
+                }
+            }
+        }
+    }
+
+}
+
+.sectionHeading {
+    font: var(--font_Family_0);
+    font-size: 48px;
+}
+
+.sectionParagraph {
+    font: var(--font_Family_1);
+    font-size: 24px;
+    text-align: center;
+}
+
+.chooseSection {
+    gap: 2rem;
+    background-color: #EDEBEB;
+    padding: 4rem 0;
+
+    .chooseContent {
+        gap: 2rem;
+    }
+
+    .chooseBox {
+        display: flex;
+
+        .chooseItem {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 0rem 2rem;
+
+            .chooseImageBox {
+                overflow: hidden;
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+            }
+
+            .title {
+                font-weight: 500;
+                font-size: 48px;
+            }
+
+            .chooseParag {
+                font: var(--font_Family_2);
+                line-height: 1.8rem;
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .sectionHeading {
+        font-size: 48px;
+    }
+
+    .sectionParagraph {
+        font-size: 24px;
+    }
+
+    .chooseSection {
+
+        .chooseBox {
+
+            .chooseItem {
+                padding: 0rem 1rem;
+
+                .title {
+                    font-size: 32px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width:700px) {
+    .chooseSection {
+
+        .chooseBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+
+            .chooseItem {
+                width: 90%;
+                padding: 0rem;
+
+                .title {
+                    font-size: 32px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .sectionHeading {
+        font-size: 32px;
+    }
+
+    .sectionParagraph {
+        font-size: 20px;
+    }
+
+    .chooseSection {
+
+        .chooseBox {
+
+            .chooseItem {
+                width: 90%;
+                align-items: center;
+
+                .title {
+                    font-size: 24px;
+                }
+
+            }
+        }
+    }
+}

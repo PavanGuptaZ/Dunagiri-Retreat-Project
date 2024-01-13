@@ -1,0 +1,86 @@
+.NavBar {
+    width: 100%;
+    height: 60px;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listBox {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+
+    .item {
+        position: relative;
+        user-select: none;
+        cursor: pointer;
+        padding: 10px 8px 5px 8px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: -3px;
+            left: 0;
+            background-color: #000;
+        }
+
+        &:hover {
+            &::before {
+                height: 4px;
+            }
+        }
+    }
+}
+
+.fullBar {
+    display: block;
+}
+
+.hiddenBar {
+    display: none;
+    z-index: 100;
+
+    .GiHamburgerMenu {
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .FaArrowRight {
+        cursor: pointer;
+        margin: 1rem 0;
+    }
+
+    .listBox {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: blueviolet;
+        flex-direction: column;
+        width: 200px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+.listBox {
+    transition: all 0.3s ease;
+}
+
+@media (max-width:900px) {
+    .fullBar {
+        display: none;
+    }
+
+    .hiddenBar {
+        display: block;
+    }
+}
