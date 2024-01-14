@@ -32,8 +32,8 @@ export const GuestExperiences = () => {
                 {showValue < totalLength - 1 && <FaChevronRight className={styles.RightArrow} onClick={() => handleChange('right')} />}
             </div>
             <div className={styles.changeSlide}>
-                {guestExperiences.map((ele, i) => {
-                    return <div key={ele} onClick={() => handleChangeNumber(i)} className={i === showValue ? styles.active : ""}></div>
+                {guestExperiences.map((_, i) => {
+                    return <div key={i} onClick={() => handleChangeNumber(i)} className={i === showValue ? styles.active : ""}></div>
                 })}
             </div>
         </section>

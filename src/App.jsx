@@ -2,11 +2,20 @@ import { Navbar } from "./components/Navbar";
 import { BasicBTN } from "./components/parts/BasicBTN";
 import { SliderBox } from "./components/parts/SliderBox";
 import styles from './styles/sections.module.css';
+import styles2 from './styles/sections2.module.css';
 import retreatSection from './assets/jsons/retreatSection.json'
 import motivationSection from './assets/jsons/motivationSection.json'
 import chooseSection from './assets/jsons/chooseSection.json'
 import { Visit } from "./components/parts/Visit";
 import { GuestExperiences } from "./components/parts/GuestExperiences";
+import { ThreeSections } from "./components/parts/ThreeSections";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { DunagiriBlog } from "./components/parts/DunagiriBlog";
+import { ContactUs } from "./components/parts/ContactUs";
+import { BiLike } from "react-icons/bi";
+import { Footer } from "./components/Footer";
 
 function App() {
 
@@ -107,6 +116,38 @@ function App() {
       <Visit />
       <GuestExperiences />
       <section className={styles.textSection} style={{ background: "#1D2927", color: "#fff" }}>Why Choose Us</section>
+      <ThreeSections />
+      <section className={styles2.MeetOurSection}>
+        <div className={styles2.MeetContent}>
+          <div className={styles2.name}><strong> Meet Our Founder Piyush Kumar</strong></div>
+          <div className={styles2.AboutPara}>Guided by the philosophy that love transcends monetary value, Piyush Kumar, a former World Bank professional, established Dunagiri Retreat in 2005. His vision was to create a retreat that harmonizes with nature and nurtures the local community, fostering a unique synergy between guests and villagers under the retreat&apos;s guiding principles.</div>
+          <div className={styles2.SocialAccountsBox}>
+            <a href="https://www.linkedin.com/in/piyush-kumar-b859a16/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+            <a href="https://www.instagram.com/dunagiri_retreat/" target="_blank" rel="noreferrer" ><FaInstagram /></a>
+            <a href="https://www.facebook.com/DunagiriRetreat/" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+          </div>
+          <BasicBTN text="About Us" />
+        </div>
+        <div className={styles2.imageDiv}>
+          <img src="https://static.wixstatic.com/media/9c6671_38312d206be444a8ba09d885b67a3d89~mv2.jpeg/v1/fill/w_289,h_542,al_c,lg_1,q_80,enc_auto/9c6671_38312d206be444a8ba09d885b67a3d89~mv2.jpeg" alt="" />
+        </div>
+      </section>
+      <DunagiriBlog />
+      <ContactUs />
+      <section className="widthControl" style={{ display: "flex", alignItems: "center" }}>
+        <BiLike className={styles2.likeIcon} />
+        <div className={styles2.SocialAccountsBox}>
+          <a href="https://www.linkedin.com/in/piyush-kumar-b859a16/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+          <a href="https://www.instagram.com/dunagiri_retreat/" target="_blank" rel="noreferrer" ><FaInstagram /></a>
+          <a href="https://www.facebook.com/DunagiriRetreat/" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+        </div>
+      </section>
+      <section className="widthControl flexRow" style={{ margin: "4rem auto" }}>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.4281967432426!2d79.44595647554533!3d29.823059675035683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a7547b97e9c3b5%3A0xeed550edee305a4b!2sDunagiri%20Retreat!5e0!3m2!1sen!2sin!4v1705229636838!5m2!1sen!2sin&maptype"
+          width={'100%'} height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+        </iframe>
+      </section>
+      <Footer />
     </>
   )
 }

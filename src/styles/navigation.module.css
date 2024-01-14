@@ -50,6 +50,7 @@
     .GiHamburgerMenu {
         user-select: none;
         cursor: pointer;
+        margin-right: 16px;
     }
 
     .FaArrowRight {
@@ -61,12 +62,19 @@
         position: fixed;
         right: 0;
         top: 0;
-        background-color: blueviolet;
+        background-color: #014235;
         flex-direction: column;
         width: 200px;
         height: 100%;
         align-items: center;
         justify-content: center;
+        color: #fff;
+
+        .item {
+            &::before {
+                background-color: #fff;
+            }
+        }
 
     }
 }
@@ -82,5 +90,63 @@
 
     .hiddenBar {
         display: block;
+    }
+}
+
+.Footer {
+    background-color: #1D2927;
+    color: #fff;
+    padding: 48px 0;
+    font-family: var(font_Family_0);
+
+    .FooterBox {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .FooterColumns {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+
+            .FooterBlock {
+                /* border: 1px solid red; */
+                /* width: calc(100% / 3); */
+                padding: 16px;
+                word-break: break-all;
+                flex-grow: 2;
+
+                .head {
+                    margin: 8px auto;
+                    font-size: 24px;
+                }
+
+                .Content {
+                    line-height: 1.75rem;
+                }
+
+                .IconsBox {
+                    display: flex;
+                    gap: 8px;
+                }
+            }
+        }
+
+        .DetailsLinks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 32px;
+            justify-content: center;
+            padding: auto 16px;
+
+            &>* {
+                user-select: none;
+                text-decoration: underline;
+            }
+        }
+
+        .CopyRightText {
+            text-align: center;
+        }
     }
 }
